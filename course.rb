@@ -16,11 +16,7 @@ class Course
   end
 
   def full_price
-    begin
-      (net_price * 100 / net_price_pct).round(2)
-    rescue ZeroDivisionError => e
-      puts e.message
-    end
+    (net_price * 100 / net_price_pct).round(2)
   end
 
   private
@@ -35,10 +31,11 @@ until quit
   begin
     puts 'Quel est ton salaire horaire net ? : '
     net_price = Float(gets.chomp)
-    puts "Quel est votre taux d'imposition ? : "
+    puts "Quel est ton taux d'imposition ? : "
     taxes_pct = Float(gets.chomp)
     if Integer(taxes_pct) == 100
       puts "Le taux d'imposition ne peut pas être égal à 100%!\n"
+      puts "On recommence!"
       next
     end
 
