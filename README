@@ -1,0 +1,5 @@
+### COURSE
+
+This project's goal is to practice Object Oriented Design, as taught by Sandi Metz in her Practical Object Oriented Design in Ruby book.
+
+The code returns the full price of a course, including taxes.
